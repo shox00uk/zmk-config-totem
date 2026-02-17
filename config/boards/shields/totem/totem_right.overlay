@@ -6,6 +6,19 @@
 
 #include "totem.dtsi"
 
+/ {
+    chosen {
+        zephyr,console = &cdc_acm_uart0;
+    };
+};
+
+&zephyr_udc0 {
+    status = "okay";
+    cdc_acm_uart0: cdc_acm_uart0 {
+        compatible = "zephyr,cdc-acm-uart";
+    };
+};
+
 &default_transform {
     col-offset = <5>;
 };
