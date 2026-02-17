@@ -9,6 +9,7 @@
 / {
     chosen {
         zephyr,console = &cdc_acm_uart0;
+        zephyr,shell_uart = &cdc_acm_uart0;
     };
 };
 
